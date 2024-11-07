@@ -1,0 +1,118 @@
+/* Estilo Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #2c3e50;
+    line-height: 1.8;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #34495e;
+}
+
+header .subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #7f8c8d;
+}
+
+header .description {
+    font-size: 1rem;
+    color: #95a5a6;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+/* Section Titles */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #bdc3c7;
+    padding-bottom: 10px;
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+}
+
+/* Experience and Skills Sections */
+section {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.job, .skills ul, .education p {
+    font-size: 1rem;
+    color: #34495e;
+    line-height: 1.6;
+    padding: 10px 0;
+}
+
+.job h3 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-top: 15px;
+}
+
+.job .role, .job .period {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+.skills ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+/* Footer */
+footer {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 40px;
+    color: #7f8c8d;
+}
+
+footer a {
+    color: #34495e;
+    text-decoration: none;
+    border-bottom: 1px dashed #34495e;
+}
+
+footer a:hover {
+    color: #2c3e50;
+    border-bottom: 1px solid #2c3e50;
+}
