@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="image/favicon.png" type="image/png">
     <title>Nycolas Dias - Analista de Dados</title>
+    <link rel="icon" href="image/favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +12,7 @@
 </head>
 <body>
     <header class="fade-in">
+        <img src="image/myimage.jpeg" alt="Foto de Nycolas Dias" class="profile-photo">
         <h1>Nycolas Dias</h1>
         <p class="subtitle">Analista de Dados</p>
         <p class="description">
@@ -20,6 +21,15 @@
         </p>
     </header>
 
+    <section class="cta fade-in">
+        <a href="https://www.linkedin.com/in/nycolas-dias-5b60111b5/" target="_blank">
+            <button>Entre em Contato</button>
+        </a>
+        <a href="https://github.com/nycolasdiaas" target="_blank">
+            <button>Ver Portfólio Completo</button>
+        </a>
+    </section>
+    
     <section class="experience fade-in">
         <h2>Experiência Profissional</h2>
         <div class="job">
@@ -37,11 +47,41 @@
     <section class="skills fade-in">
         <h2>Habilidades</h2>
         <ul>
-            <li>Power BI Avançado (M e DAX)</li>
-            <li>Python para ETL e Machine Learning</li>
-            <li>SQL Avançado</li>
+            <li><span>Power BI Avançado (M e DAX)</span> <div class="skill-level"><div class="level" style="width: 90%;"></div></div></li>
+            <li><span>Python para ETL e Machine Learning</span> <div class="skill-level"><div class="level" style="width: 85%;"></div></div></li>
+            <li><span>SQL Avançado</span> <div class="skill-level"><div class="level" style="width: 80%;"></div></div></li>
         </ul>
     </section>
+
+    <section class="testimonials fade-in">
+        <h2>Depoimentos</h2>
+        <div class="testimonial-container">
+            <button class="nav-button" id="prev-button">&#9664;</button> <!-- Botão para navegação à esquerda -->
+            
+            <div class="testimonial" id="testimonial-1">
+                <p class="testimonial-text">
+                    "Nycolas é um analista de dados excepcional. Sua capacidade de transformar dados complexos em insights claros é única."
+                </p>
+                <p class="testimonial-author">
+                    Jessé Lopes - Senior Data Analyst at Sou Energy
+                </p>
+            </div>
+    
+            <div class="testimonial" id="testimonial-2">
+                <p class="testimonial-text">
+                    "Nycolas é um analista dedicado, com habilidade para transformar dados em insights estratégicos."
+                </p>
+                <p class="testimonial-author">
+                    Victor Emannuel - Senior Data Analyst at Sou Energy
+                </p>
+            </div>
+            
+            <button class="nav-button" id="next-button">&#9654;</button> <!-- Botão para navegação à direita -->
+        </div>
+    </section>
+    
+    
+    
 
     <section class="education fade-in">
         <h2>Formação</h2>
@@ -54,3 +94,32 @@
     </footer>
 </body>
 </html>
+<script>
+
+const testimonials = document.querySelectorAll('.testimonial');
+let currentTestimonial = 0;
+
+// Função para atualizar o depoimento exibido
+function updateTestimonial() {
+    testimonials.forEach((testimonial, index) => {
+        testimonial.classList.toggle('active', index === currentTestimonial);
+    });
+}
+
+// Botão de navegação para o depoimento anterior
+document.getElementById('prev-button').addEventListener('click', () => {
+    currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+    updateTestimonial();
+});
+
+// Botão de navegação para o próximo depoimento
+document.getElementById('next-button').addEventListener('click', () => {
+    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+    updateTestimonial();
+});
+
+// Inicializar o primeiro depoimento como ativo
+updateTestimonial();
+
+
+</script>
