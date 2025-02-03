@@ -1,125 +1,197 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nycolas Dias - Analista de Dados</title>
-    <link rel="icon" href="image/favicon.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nycolas Dias - Analista de Dados</title>
+  <link rel="icon" href="image/favicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="fade-in">
-        <img src="image/myimage.jpeg" alt="Foto de Nycolas Dias" class="profile-photo">
-        <h1>Nycolas Dias</h1>
-        <p class="subtitle">Analista de Dados</p>
-        <p class="description">
-            Profissional analítico com ampla experiência na interpretação de grandes conjuntos de dados, 
-            identificando tendências e insights cruciais para decisões estratégicas.
-        </p>
-    </header>
+  <header class="fade-in">
+    <!-- Toggle switch posicionado no canto superior direito -->
+    <div class="toggle-switch">
+      <input type="checkbox" id="language-toggle">
+      <label for="language-toggle"></label>
+      <span id="language-indicator">PT</span>
+    </div>
+    <img src="image/myimage.jpeg" alt="Foto de Nycolas Dias" class="profile-photo">
+    <h1 id="name">Nycolas Dias</h1>
+    <p class="subtitle" id="role">Analista de Dados</p>
+    <p class="description" id="description">
+      Profissional analítico com ampla experiência na interpretação de grandes conjuntos de dados, identificando tendências e insights cruciais para decisões estratégicas.
+    </p>
+  </header>
 
-    <section class="cta fade-in">
-        <a href="https://www.linkedin.com/in/nycolas-dias-5b60111b5/" target="_blank">
-            <button>Entre em Contato</button>
-        </a>
-        <a href="https://github.com/nycolasdiaas" target="_blank">
-            <button>Ver Portfólio Completo</button>
-        </a>
-    </section>
-    
-    <section class="experience fade-in">
-        <h2>Experiência Profissional</h2>
-        <div class="job">
-            <h3>Grupo Accord, Fortaleza</h3>
-            <p class="role">Middle Data Analyst</p>
-            <p class="period">Agosto 2024 – Presente</p>
-            <ul>
-                <li>Desenvolvimento de dashboards interativos e insights estratégicos.</li>
-                <li>Otimização de pipelines de dados em infraestruturas na nuvem (AWS).</li>
-                <li>Automatização de processos ETL com Python e Pentaho.</li>
-            </ul>
-        </div>
-    </section>
+  <section class="cta fade-in">
+    <a href="https://www.linkedin.com/in/nycolas-dias-5b60111b5/" target="_blank">
+      <button id="contact">Entre em Contato</button>
+    </a>
+    <a href="https://github.com/nycolasdiaas" target="_blank">
+      <button id="portfolio">Ver Portfólio Completo</button>
+    </a>
+  </section>
 
-    <section class="skills fade-in">
-        <h2>Habilidades</h2>
+  <section class="experience fade-in">
+    <h2 id="experience-title">Experiência Profissional Atual</h2>
+    <div class="job">
+      <h3 id="job-title">Grupo Accord, Fortaleza</h3>
+      <p class="role" id="job-role">Analista de Dados Pleno</p>
+      <p class="period" id="job-period">(Ago 2024 – Presente)</p>
+      <!-- Bloco único de destaques com os 4 pontos importantes -->
+      <div class="highlights" id="expHighlights">
         <ul>
-            <li><span>Power BI Avançado (M e DAX)</span> <div class="skill-level"><div class="level" style="width: 90%;"></div></div></li>
-            <li><span>Python para ETL e Machine Learning</span> <div class="skill-level"><div class="level" style="width: 85%;"></div></div></li>
-            <li><span>SQL Avançado</span> <div class="skill-level"><div class="level" style="width: 80%;"></div></div></li>
+          <li>Desenvolvimento de <strong>dashboards interativos</strong> e <strong>data storytelling</strong>.</li>
+          <li>Otimização de <strong>pipelines de dados escaláveis</strong> em <strong>AWS</strong> e <strong>on-premises</strong>.</li>
+          <li>Modelagem e manutenção de <strong>bases de dados</strong> com mais de <strong>250M+ registros</strong>.</li>
+          <li>Automação de <strong>ETL/ELT workflows</strong> com <strong>Python</strong>, <strong>Pentaho</strong> e <strong>Apache Hop</strong>.</li>
         </ul>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="testimonials fade-in">
-        <h2>Depoimentos</h2>
-        <div class="testimonial-container">
-            <button class="nav-button" id="prev-button">&#9664;</button> <!-- Botão para navegação à esquerda -->
-            
-            <div class="testimonial" id="testimonial-1">
-                <p class="testimonial-text">
-                    "Nycolas é um analista de dados excepcional. Sua capacidade de transformar dados complexos em insights claros é única."
-                </p>
-                <p class="testimonial-author">
-                    Jessé Lopes - Senior Data Analyst at Sou Energy
-                </p>
-            </div>
-    
-            <div class="testimonial" id="testimonial-2">
-                <p class="testimonial-text">
-                    "Nycolas é um analista dedicado, com habilidade para transformar dados em insights estratégicos."
-                </p>
-                <p class="testimonial-author">
-                    Victor Emannuel - Senior Data Analyst at Sou Energy
-                </p>
-            </div>
-            
-            <button class="nav-button" id="next-button">&#9654;</button> <!-- Botão para navegação à direita -->
-        </div>
-    </section>
-    
-    
-    
+  <section class="testimonials fade-in">
+    <h2 id="testimonials-title">Depoimentos</h2>
+    <div class="testimonial-container">
+      <button class="nav-button" id="prev-button" aria-label="Depoimento anterior">&#9664;</button>
+      
+      <div class="testimonial" id="testimonial-1">
+        <p class="testimonial-text" id="testimonial-text-1">
+          <!-- Texto será preenchido via JavaScript -->
+        </p>
+        <p class="testimonial-author" id="testimonial-author-1">
+          <!-- Autor será preenchido via JavaScript -->
+        </p>
+      </div>
+  
+      <div class="testimonial" id="testimonial-2">
+        <p class="testimonial-text" id="testimonial-text-2">
+          <!-- Texto será preenchido via JavaScript -->
+        </p>
+        <p class="testimonial-author" id="testimonial-author-2">
+          <!-- Autor será preenchido via JavaScript -->
+        </p>
+      </div>
+      
+      <div class="testimonial" id="testimonial-3">
+        <p class="testimonial-text" id="testimonial-text-3">
+          <!-- Texto será preenchido via JavaScript -->
+        </p>
+        <p class="testimonial-author" id="testimonial-author-3">
+          <!-- Autor será preenchido via JavaScript -->
+        </p>
+      </div>
+      
+      <button class="nav-button" id="next-button" aria-label="Próximo depoimento">&#9654;</button>
+    </div>
+  </section>
 
-    <section class="education fade-in">
-        <h2>Formação</h2>
-        <p>Estácio de Sá University - Análise e Desenvolvimento de Sistemas (2020 – 2024)</p>
-    </section>
+  <section class="education fade-in">
+    <h2 id="education-title">Formação</h2>
+    <p id="education">Estácio de Sá University - Análise e Desenvolvimento de Sistemas (2020 – 2024)</p>
+  </section>
 
-    <footer class="fade-in">
-        <p>Contato: <a href="mailto:nycolas.diaas@outlook.com">nycolas.diaas@outlook.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/nycolas-dias-5b60111b5/" target="_blank">Nycolas Dias</a></p>
-    </footer>
+  <footer class="fade-in">
+    <p>Contato: <a href="mailto:nycolas.diaas@outlook.com">nycolas.diaas@outlook.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/nycolas-dias-5b60111b5/" target="_blank">Nycolas Dias</a></p>
+  </footer>
+
+  <script>
+    // --- Traduções ---
+    const translations = {
+      "pt": {
+        "role": "Analista de Dados",
+        "description": "Profissional analítico com ampla experiência na interpretação de grandes conjuntos de dados, identificando tendências e insights cruciais para decisões estratégicas.",
+        "contact": "Entre em Contato",
+        "portfolio": "Ver Portfólio Completo",
+        "experience-title": "Experiência Profissional Atual",
+        "job-title": "Grupo Accord, Fortaleza",
+        "job-role": "Analista de Dados Pleno",
+        "job-period": "(Ago 2024 – Presente)",
+        "expHighlights": "<ul><li>Desenvolvimento de <strong>dashboards interativos</strong> e <strong>data storytelling</strong>.</li><li>Otimização de <strong>pipelines de dados escaláveis</strong> em <strong>AWS</strong> e <strong>on-premises</strong>.</li><li>Modelagem e manutenção de <strong>bases de dados</strong> com mais de <strong>250M+ registros</strong>.</li><li>Automação de <strong>ETL/ELT workflows</strong> com <strong>Python</strong>, <strong>Pentaho</strong> e <strong>Apache Hop</strong>.</li></ul>",
+        "testimonials-title": "Depoimentos",
+        "testimonial-text-1": "Trabalhador e de alto astral. Muito agradável de se trabalhar. Certamente um realizador que está sempre buscando maneiras de melhorar a qualidade de seu trabalho.",
+        "testimonial-author-1": "Jessé Lopes - Analista de Dados Sênior Sou Energy",
+        "testimonial-text-2": "Nycolas teve a oportunidade de contribuir para o desenvolvimento de relatórios de Business Intelligence durante seu estágio e, posteriormente, trabalhar na equipe do Enterprise Data Warehouse. Ele aprende e se adapta rapidamente a novas tecnologias, tornando-o um ativo valioso em análise de dados. É um excelente jogador de equipe, sempre disposto a aprender e melhorar.",
+        "testimonial-author-2": "Vitor Martins - Lider de Dados na Sou Energy",
+        "testimonial-text-3": "Tive o prazer de trabalhar com Nycolas Dias na Sou Energy por quase 2 anos. Desde o início, ele se destacou por sua excepcional habilidade em inovar em soluções de análise de dados, demonstrando profundo conhecimento. O que mais me impressionou foi sua capacidade de encontrar soluções criativas para desafios complexos. Além disso, Nycolas é extremamente colaborativo e comunicativo. Recomendo fortemente Nycolas para qualquer oportunidade futura, pois tenho certeza de que ele será um valioso ativo para qualquer equipe.",
+        "testimonial-author-3": "Antonio - Analista de Dados Pleno na Sou Energy",
+        "education-title": "Formação",
+        "education": "Estácio de Sá University - Análise e Desenvolvimento de Sistemas (2020 – 2024)"
+      },
+      "en": {
+        "role": "Data Analyst",
+        "description": "Analytical professional with extensive experience in interpreting large datasets, identifying trends, and extracting crucial insights for strategic decision-making.",
+        "contact": "Contact Me",
+        "portfolio": "View Full Portfolio",
+        "experience-title": "Current Professional Experience",
+        "job-title": "Grupo Accord, Fortaleza",
+        "job-role": "Data Analyst II",
+        "job-period": "(Aug 2024 – Present)",
+        "expHighlights": "<ul><li>Developed <strong>interactive dashboards</strong> and <strong>data storytelling</strong>.</li><li>Optimized scalable <strong>data pipelines</strong> in <strong>AWS</strong> and <strong>on-premises</strong> environments.</li><li>Modeled and maintained <strong>databases</strong> with over <strong>250M+ records</strong>.</li><li>Automated <strong>ETL/ELT workflows</strong> using <strong>Python</strong>, <strong>Pentaho</strong>, and <strong>Apache Hop</strong>.</li></ul>",
+        "testimonials-title": "Testimonials",
+        "testimonial-text-1": "Hardworking and high-spirited. Very pleasant to work with. Certainly a go-getter who is always looking for ways to improve the quality of his work.",
+        "testimonial-author-1": "Jessé Lopes - Data Analyst III at Sou Energy",
+        "testimonial-text-2": "Nycolas had the opportunity to contribute to the development of Business Intelligence reports during his internship and later work on the development team of the Enterprise Data Warehouse. He quickly learns and adapts to new technologies, making him a valuable asset in data analysis. He is a great team player, eager to learn and improve.",
+        "testimonial-author-2": "Vitor Martins - Team Leader at Sou Energy",
+        "testimonial-text-3": "I had the pleasure of working with Nycolas Dias at Sou Energy for almost 2 years. From the beginning, he stood out with his exceptional ability to innovate in data analysis solutions, demonstrating profound knowledge. What impressed me most was his capacity to find creative solutions for complex challenges. Besides his technical skills, Nycolas is extremely collaborative and communicative. I strongly recommend Nycolas for any future opportunity, and I am confident he will be a valuable asset to any team.",
+        "testimonial-author-3": "Antonio - Data Analyst II at Sou Energy",
+        "education-title": "Education",
+        "education": "Estácio de Sá University - Systems Analysis and Development (2020 – 2024)"
+      }
+    };
+
+    let currentLanguage = "pt";
+
+    // Função para atualizar o conteúdo de todos os elementos com base na tradução atual
+    function updateContent() {
+      Object.keys(translations[currentLanguage]).forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.innerHTML = translations[currentLanguage][id];
+        }
+      });
+    }
+
+    // Atualiza o conteúdo ao carregar a página
+    updateContent();
+
+    document.getElementById("language-toggle").addEventListener("change", function(){
+      if(this.checked) {
+        currentLanguage = "en";
+        document.getElementById("language-indicator").innerText = "EN";
+      } else {
+        currentLanguage = "pt";
+        document.getElementById("language-indicator").innerText = "PT";
+      }
+      updateContent();
+    });
+
+    // --- Slider dos Depoimentos ---
+    const testimonials = document.querySelectorAll('.testimonial');
+    let currentTestimonial = 0;
+
+    function updateTestimonial() {
+      testimonials.forEach((testimonial, index) => {
+        testimonial.classList.toggle('active', index === currentTestimonial);
+      });
+    }
+
+    document.getElementById('prev-button').addEventListener('click', () => {
+      currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+      updateTestimonial();
+    });
+
+    document.getElementById('next-button').addEventListener('click', () => {
+      currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+      updateTestimonial();
+    });
+
+    // Inicializa o slider com o primeiro depoimento ativo
+    updateTestimonial();
+  </script>
 </body>
 </html>
-<script>
-
-const testimonials = document.querySelectorAll('.testimonial');
-let currentTestimonial = 0;
-
-// Função para atualizar o depoimento exibido
-function updateTestimonial() {
-    testimonials.forEach((testimonial, index) => {
-        testimonial.classList.toggle('active', index === currentTestimonial);
-    });
-}
-
-// Botão de navegação para o depoimento anterior
-document.getElementById('prev-button').addEventListener('click', () => {
-    currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
-    updateTestimonial();
-});
-
-// Botão de navegação para o próximo depoimento
-document.getElementById('next-button').addEventListener('click', () => {
-    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-    updateTestimonial();
-});
-
-// Inicializar o primeiro depoimento como ativo
-updateTestimonial();
-
-
-</script>
